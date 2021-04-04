@@ -1,18 +1,12 @@
-
 /* @import url("https://fonts.googleapis.com/css?family=Josefin Sans") */
-
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Josefin Sans" ,"Arial Narrow";
+  font-family: 'Josefin Sans', 'Arial Narrow';
 }
 
-
-
-
-.header{
+.header {
   width: 100%;
   line-height: 100px;
   background-color: #f5ba13;
@@ -21,38 +15,36 @@
   align-items: center;
   padding-left: 50px;
   color: white;
-  box-shadow: 5px 3px 15px -5px rgba(0,0,0,0.3);
+  box-shadow: 5px 3px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-
-.main_note{
-  width: 500px;
+.main_note {
+  width: calc(100% - 40%);
   padding: 15px 10px 5px 10px;
   margin: 20px auto;
 }
 
-.my_notes h1{
+.my_notes h1 {
   color: #34495e;
 }
 
-.my_notes p{
+.my_notes p {
   color: gray;
 }
 
-
-
-
-form{
-  min-height: 50px;
+form {
+  /* min-height: 50px; */
   color: #ecf0f1;
   padding: 15px 10px 5px 10px;
   box-shadow: 3px 5px 15px -5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   position: relative;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
-
-input{
+input {
   width: 100%;
   line-height: 30px;
   background: transparent;
@@ -63,8 +55,7 @@ input{
   font-weight: bold;
 }
 
-
-textarea{
+textarea {
   width: 100%;
   line-height: 30px;
   background: transparent;
@@ -72,26 +63,23 @@ textarea{
   outline: none;
   font-size: 1rem;
   margin: 10px 0;
+  resize: vertical;
 }
 
-
-
-
-.MuiButton-root{
+.MuiButton-root {
   width: 30px;
   height: 50px;
   position: absolute;
-  bottom: -28px;
-  left: 200px;
+  bottom: -25px !important;
+  right: 0px !important;
   cursor: pointer;
   background-color: #fff !important;
-  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
-  border-radius:60% !important
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  border-radius: 50rem !important;
+  align-self: flex-end;
 }
 
-
-
-.MuiButton-root .plus_sign{
+.MuiButton-root .plus_sign {
   font-size: 45px !important;
   font-weight: 900;
   color: #f4b400;
@@ -100,17 +88,16 @@ textarea{
   background: transparent;
 }
 
-.MuiButton-root:hover{
+.MuiButton-root:hover {
   background: #f4b400 !important;
 }
 
-
-.MuiButton-root:hover .plus_sign{
+.MuiButton-root:hover .plus_sign {
   color: #fff;
   background: transparent;
 }
 
-.note{
+.note {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
@@ -120,14 +107,13 @@ textarea{
   float: left;
 }
 
-
-.note h1{
+.note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
   text-align: left;
 }
 
-.note p{
+.note p {
   text-align: left;
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -135,8 +121,7 @@ textarea{
   word-wrap: break-word;
 }
 
-
-.note .btn{
+.note .btn {
   margin-right: 0;
   position: relative;
   float: right;
@@ -146,27 +131,47 @@ textarea{
   width: 50px;
   height: 50px;
   background: transparent;
-  cursor: pointer;  
+  cursor: pointer;
   outline: none;
-  box-shadow: 3px 3px 15px -10px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 15px -10px rgba(0, 0, 0, 0.3);
   border-radius: 27px;
 }
-.deleteIcon{
+.deleteIcon {
   width: 0.7em;
   height: 0.7em;
 }
 
-.note .btn:hover{
+.note .btn:hover {
   background-color: #f5ba13;
 }
-.note .btn:hover .deleteIcon{
-  color:#fff;
+.note .btn:hover .deleteIcon {
+  color: #fff;
 }
 
-footer{
+footer {
   width: 100%;
   position: absolute;
   bottom: 0;
   text-align: center;
   justify-content: center;
+}
+.fileupload{
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: transparent;
+  margin: 5px;
+  color: #f4b400!important;
+}
+.uploadfileicon{
+  color: #f4b400;
+}
+.uploadfileicon:hover{
+  color: #fff;
+  
+}
+.fileupload:hover{
+  background-color: #f4b400;
 }

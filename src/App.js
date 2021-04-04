@@ -28,11 +28,13 @@ const [addItem, setAddItem] = useState([]);
      
       <CreateNote passNote= {addNote} />
      { addItem.map((val,index)=>{
+      
         return <Note
           key = {index}
           id = {index}
           title = {val.title}
           content = {val.content}
+          image = {val.image}
           deleteItem = {onDelete}
         />
       })}
